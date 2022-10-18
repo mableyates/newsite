@@ -1,9 +1,462 @@
+
 <!DOCTYPE html>
-<html>
-<head>
-<title>How to put PHP in HTML - Simple Example</title>
-</head>
-<body>
-<h1><?php echo "This message is from server side." ?></h1>
+<html dir='ltr' lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'><!--/**
+*
+* Created By Anas RAR
+* NihLink v2.5.4
+* Author : Anas RAR
+* Date	 : 10 April 2019
+* URL 	 : anasrar.github.io
+* Repository : https://github.com/anasrar/NihLink-Safelink-Template-Blogger
+* License : https://github.com/anasrar/NihLink-Safelink-Template-Blogger/blob/master/LICENSE
+*
+*/<head>--><!--<body><!--Het is jouw verantwoordelijkheid om je bezoekers te laten weten dat je er op je blog cookies worden gebruikt en gegevens worden verzameld. Blogger stelt een standaardmelding beschikbaar die je op je blog kunt gebruiken. Je kunt de melding naar wens aanpassen of zelf een eigen melding opstellen. Zie http://www.blogger.com/go/cookiechoices voor meer informatie.-->
+<script type="text/javascript" nonce="57141bdd61144404b6b1854d8d1" src="//local.adguard.org?ts=1666091738948&amp;type=content-script&amp;dmn=nihlink.blogspot.com&amp;pth=%2F&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="57141bdd61144404b6b1854d8d1" src="//local.adguard.org?ts=1666091738948&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><script defer='' src='/js/cookienotice.js'></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+      window.cookieChoices && cookieChoices.showCookieConsentBar && cookieChoices.showCookieConsentBar(
+          (window.cookieOptions && cookieOptions.msg) || 'Deze site gebruikt cookies van Google om services te leveren en verkeer te analyseren. Je IP-adres en user-agent worden met Google gedeeld, samen met prestatie- en beveiligingsstatistieken om servicekwaliteit te garanderen, gebruiksstatistieken te genereren, misbruik te detecteren en maatregelen te treffen.',
+          (window.cookieOptions && cookieOptions.close) || 'OK',
+          (window.cookieOptions && cookieOptions.learn) || 'Meer informatie',
+          (window.cookieOptions && cookieOptions.link) || 'https://www.blogger.com/go/blogspot-cookies');
+    });
+  </script>
+
+<script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/1583485740-widgets.js"></script>
+<script type='text/javascript'>
+window['__wavt'] = 'AOuZoY4AMjPZ1QOHtnSzMbI5VaKhKdzpCg:1666095287437';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d8589258559870785110','//nihlink.blogspot.com/','8589258559870785110');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '8589258559870785110', 'title': 'NihLink', 'url': 'https://nihlink.blogspot.com/', 'canonicalUrl': 'https://nihlink.blogspot.com/', 'homepageUrl': 'https://nihlink.blogspot.com/', 'searchUrl': 'https://nihlink.blogspot.com/search', 'canonicalHomepageUrl': 'https://nihlink.blogspot.com/', 'blogspotFaviconUrl': 'https://nihlink.blogspot.com/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'en', 'localeUnderscoreDelimited': 'en', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22NihLink - Atom\x22 href\x3d\x22https://nihlink.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22NihLink - RSS\x22 href\x3d\x22https://nihlink.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22NihLink - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/8589258559870785110/posts/default\x22 /\x3e\n', 'meTag': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': false, 'adsenseAutoAds': false, 'boqCommentIframeForm': true, 'loginRedirectParam': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/41ea3570bb1412a6', 'plusOneApiSrc': 'https://apis.google.com/js/platform.js', 'disableGComments': true, 'sharing': {'platforms': [{'name': 'Get link', 'key': 'link', 'shareMessage': 'Get link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Share to Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'Share to Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Share to Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 0, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27en\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Read more', 'pageType': 'index', 'pageName': '', 'pageTitle': 'NihLink'}}, {'name': 'features', 'data': {'sharing_get_link_dialog': 'true', 'sharing_native': 'false'}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Link copied to clipboard!', 'ok': 'Ok', 'postLink': 'Post Link'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Custom', 'isResponsive': true, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'NihLink', 'description': 'Just simple safelink project', 'url': 'https://nihlink.blogspot.com/', 'type': 'feed', 'isSingleItem': false, 'isMultipleItems': true, 'isError': false, 'isPage': false, 'isPost': false, 'isHomepage': true, 'isArchive': false, 'isLabelSearch': false}}, {'name': 'widgets', 'data': [{'title': 'setting', 'type': 'HTML', 'sectionId': 'page-setting', 'id': 'HTML696'}, {'title': 'left-sidebar-ads', 'type': 'HTML', 'sectionId': 'ads-left', 'id': 'HTML602'}, {'title': 'Blog Posts', 'type': 'Blog', 'sectionId': 'page-is', 'id': 'Blog1', 'posts': [{'id': '805438721793227260', 'title': 'Adhesion and Bond Strength', 'featuredImage': 'https://1.bp.blogspot.com/-z675g8RhRhQ/WmcFU-rAbfI/AAAAAAAAHeg/ttisTZptKSIpEVjO9334fCVz6gsEGqU1wCLcBGAs/s320/Bond_Strength_of_Plain_Strand_Cablebolts.jpg', 'showInlineAds': false}, {'id': '6198322006576994272', 'title': 'platelets', 'featuredImage': 'https://lh3.googleusercontent.com/blogger_img_proxy/ANbyha04gwW05iZRTvnQQ-3rjy69C6vV62aD0HtYziSbXSJEPg4KFkwy8TxNghgp_iKKl1azCXZvyLJtVJOs_mbFx0dV1UHd3ZJ32b34JTkT1YgySn3z', 'showInlineAds': false}, {'id': '9042604476729029808', 'title': 'Hello Wolrd!', 'showInlineAds': false}], 'headerByline': {'regionName': 'header1', 'items': [{'name': 'share', 'label': ''}, {'name': 'author', 'label': 'By'}, {'name': 'timestamp', 'label': '-'}]}, 'footerBylines': [{'regionName': 'footer1', 'items': [{'name': 'comments', 'label': 'Comment'}, {'name': 'icons', 'label': ''}, {'name': 'backlinks', 'label': ''}]}, {'regionName': 'footer2', 'items': [{'name': 'labels', 'label': 'Labels'}]}, {'regionName': 'footer3', 'items': [{'name': 'reactions', 'label': 'Reaction'}]}], 'allBylineItems': [{'name': 'share', 'label': ''}, {'name': 'author', 'label': 'By'}, {'name': 'timestamp', 'label': '-'}, {'name': 'comments', 'label': 'Comment'}, {'name': 'icons', 'label': ''}, {'name': 'backlinks', 'label': ''}, {'name': 'labels', 'label': 'Labels'}, {'name': 'reactions', 'label': 'Reaction'}]}, {'title': 'right-sidebar-ads', 'type': 'HTML', 'sectionId': 'ads-right', 'id': 'HTML704'}]}]);
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML696', 'page-setting', document.getElementById('HTML696'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML602', 'ads-left', document.getElementById('HTML602'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'page-is', document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/1854391717-lbx.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/3523451998-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML704', 'ads-right', document.getElementById('HTML704'), {}, 'displayModeFull'));
+</script>
+</body>--><head>
+
+<meta content='width=device-width, initial-scale=1, user-scalable=yes, maximum-scale=1' name='viewport'/>
+<title>NihLink</title>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<!-- Chrome, Firefox OS and Opera -->
+<meta content='' name='theme-color'/>
+<!-- Windows Phone -->
+<meta content='' name='msapplication-navbutton-color'/>
+<meta content='blogger' name='generator'/>
+<link href='https://nihlink.blogspot.com/favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='https://nihlink.blogspot.com/' rel='canonical'/>
+<link rel="alternate" type="application/atom+xml" title="NihLink - Atom" href="https://nihlink.blogspot.com/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="NihLink - RSS" href="https://nihlink.blogspot.com/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="NihLink - Atom" href="https://www.blogger.com/feeds/8589258559870785110/posts/default" />
+<!--Can't find substitution for tag [blog.ieCssRetrofitLinks]-->
+<meta content='https://nihlink.blogspot.com/' property='og:url'/>
+<meta content='NihLink' property='og:title'/>
+<meta content='Just simple safelink project' property='og:description'/>
+<meta content='https://1.bp.blogspot.com/-z675g8RhRhQ/WmcFU-rAbfI/AAAAAAAAHeg/ttisTZptKSIpEVjO9334fCVz6gsEGqU1wCLcBGAs/w1200-h630-p-k-no-nu/Bond_Strength_of_Plain_Strand_Cablebolts.jpg' property='og:image'/>
+<meta content='https://lh3.googleusercontent.com/blogger_img_proxy/ANbyha04gwW05iZRTvnQQ-3rjy69C6vV62aD0HtYziSbXSJEPg4KFkwy8TxNghgp_iKKl1azCXZvyLJtVJOs_mbFx0dV1UHd3ZJ32b34JTkT1YgySn3z=w1200-h630-p-k-no-nu' property='og:image'/>
+<link crossorigin='anonymous' href='//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'/>
+<link href='//use.fontawesome.com/releases/v5.0.10/css/all.css' rel='stylesheet' type='text/css'/>
+<script src='//code.jquery.com/jquery-2.1.4.min.js' type='text/javascript'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js'></script>
+<script type='text/javascript'>
+"use strict";
+$(document).ready(function() {
+  (function(W,D){
+    W.asli_config = {
+      url: '',
+      page: '',
+      output: '#output',
+      defaultkey: 'AnasRAR',
+      fixednavbar: false,
+      countdown: true,
+      timedown: 10,
+      lang: {
+        urlempty: "URL can not empty",
+        convertsuccess: "Convert URL success, copy url on box below",
+        validtext: "HTTP, HTTPS, or WWW",
+        gourltext: "coba di klik linknya pak",
+        nourl: "nggapain pak ??, linknya nggak ada",
+        errorconvert: "URL can not to convert",
+        emptypass: "Password can not empty",
+        wrongpass: "Password is incorrect",
+        countdowntext: "Please Wait {{anascountdown}} Second"
+      }
+    }
+    var xv = $('footer > .d-table > .d-table-row > .d-table-cell > .container > .row > .col-sm-7 > a#naas');
+    if(xv.length){
+      W.validurlit = function (ur) {
+        return /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/.test(ur);
+      }
+      W.sUp = function(el) {
+        D.querySelector(el).parentNode.style.height = '0';
+      }
+      W._GET = function(name, url) {
+        if (!url) url = location.href;
+        name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+        var regexS = "[\\?&]"+name+"=([^&#]*)";
+        var regex = new RegExp( regexS );
+        var results = regex.exec( url );
+        return results == null ? null : results[1];
+      }
+      xv.attr('href', '//anasrar.github.io').text('Anas RAR');
+    } else {
+      location.href = '//anasrar.github.io';
+    }
+  }(window,document));
+});
+</script>
+<style id='page-skin-1' type='text/css'><!--
+/* LAYOUT WIDGET */
+body#layout {width:100%}
+body#layout ul {display: none;}
+body#layout .layouthide {display:none}
+
+--></style>
+<style id='template-skin-1' type='text/css'><!--
+body#layout:before{content:"NihLink v2.5.4";position:absolute;top:33px;right:7px;z-index:1;padding:10px 20px;font-size:18px;font-family:sans-serif;color:#fff;background: #007bff}
+body#layout {background-color: #fff; border: 0}
+body#layout div.section {background-color: #fff}
+body#layout .add_widget a {color: #007bff}
+body#layout .row:after {content:'';clear:both;display:block}
+body#layout .isHideLayout {display:none;}
+body#layout .col-md-3 {float:left;width:30%;}
+body#layout .col-md-6 {float:left;width:40%;}
+body#layout #page-setting {background: #fffcf2}
+--></style>
+<style type='text/css'>
+	/* FIX */
+	.hidden{visibility:hidden;height:0;overflow:hidden;display:none}
+	.clear, .clearfix{clear:both}
+	.separator a {margin:initial!important;}
+	.separator a img{margin: 1em;}
+	.separator:nth-child(1) a img{margin:initial;margin-bottom:auto}
+
+	/* BODY */
+  * {
+    outline: none !important;
+  }
+	html, body {
+	  height: 100%;
+	}
+	a:hover {
+		text-decoration: none !important
+	}
+	.overflow-hidden {
+	  overflow: hidden;
+	}
+	.trans {
+	  -webkit-transition: all .5s ease-in-out;
+	  -moz-transition: all .5s ease-in-out;
+	  -ms-transition: all .5s ease-in-out;
+	  -o-transition: all .5s ease-in-out;
+	  transition: all .5s ease-in-out;
+	}
+	.hidding-smooth {
+	  position: relative;
+	  height: 6vh;
+	  overflow: hidden;
+	}
+	.hidding-smooth:after {
+	  -webkit-transition: ease 0.8s;
+	  -moz-transition: ease 0.8s;
+	  -ms-transition: ease 0.8s;
+	  -o-transition: ease 0.8s;
+	  transition: ease 0.8s;
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  content: '';
+	  background: linear-gradient(180deg, transparent, white 70%);
+	  width: 100%;
+	  height: 5vh;
+	}
+	.hidding-smooth:hover:after {
+	  height: 1px;
+	}
+	#fullpage {
+	  min-height: 100%;
+	  margin: 0 0 -120px 0;
+	  padding: 0 0 120px 0;
+	}
+	footer.footer {
+	  height: 120px;
+	  background-color: #ffffff;
+	  border-top: 1px solid #dee2e6;
+	}
+	.sticky-top {
+	  top: calc(60px + 1rem)
+    }
+	@media (max-width: 767px) {
+    .order-custom {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1
+    }
+  }
+</style>
+
+<!--<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+<script type="text/javascript" language="javascript">
+  // Supply ads personalization default for EEA readers
+  // See https://www.blogger.com/go/adspersonalization
+  adsbygoogle = window.adsbygoogle || [];
+  if (typeof adsbygoogle.requestNonPersonalizedAds === 'undefined') {
+    adsbygoogle.requestNonPersonalizedAds = 1;
+  }
+</script>
+
+
+</head>--></head>
+<body itemscope='itemscope' itemtype='http://schema.org/WebPage'>
+
+<div id='fullpage'>
+<div class='container-semifluid'>
+<div class='holder'>
+<nav class='navbar navbar-expand border-bottom bg-white py-2' data-type='fixednav'>
+<div class='container'>
+<a class='navbar-brand' href='https://nihlink.blogspot.com/'>NihLink</a>
+<button aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarSupportedContent' data-toggle='collapse' type='button'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse justify-content-end' id='navbarSupportedContent'>
+<ul class='navbar-nav ml-auto'>
+<li class='nav-item dropdown'>
+<a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle px-0' data-toggle='dropdown' href='#' id='navbarDropdown' role='button'>
+                  Menu
+                </a>
+<ul aria-labelledby='navbarDropdown' class='dropdown-menu dropdown-menu-right' itemprop='mainEntity' itemscope='itemscope' itemtype='http://schema.org/SiteNavigationElement'>
+<li class='dropdown-item'><a href='//github.com/anasrar/NihLink-Safelink-Template-Blogger' itemprop='url' title='Documentation'><span itemprop='name'>Documentation</span></a></li>
+<div class='dropdown-divider'></div>
+<li class='dropdown-item'><a href='//anasrar.github.io/blog/' itemprop='url' title='My Blog'><span itemprop='name'>My Blog</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+<div class='container py-3'>
+<div id='isihalaman'>
+<div class='page-setting section' id='page-setting'><div class='widget HTML' data-version='2' id='HTML696'>
+<script type='text/javascript'>
+  "use strict";
+  $(document).ready(function() {
+    window.new_config = {
+      url: "",
+page: "",
+output: "#output",
+fixednavbar: true,
+countdown: true,
+timedown: 10,
+lang: {
+ urlempty: "URL can not be empty",
+ convertsuccess: "Convert URL success, copy url on box below",
+ validtext: "HTTP, HTTPS, or WWW",
+ gourltext: "Click here to go",
+ nourl: "No URl here",
+ errorconvert: "URL can not to convert",
+ emptypass: "Password can not be empty",
+ wrongpass: "Password is incorrect",
+ countdowntext: "Please Wait {{anascountdown}} Second"
+}
+    }
+    window.config = $.extend(true, asli_config, new_config);
+  });
+</script>
+</div></div>
+<div class='row'>
+<div class='col-12 col-md-3 mb-3'>
+<div class='ads-left sticky-top section' id='ads-left'><div class='widget HTML' data-version='2' id='HTML602'>
+</div></div>
+</div>
+<div class='col-12 col-md-6 pb-3'>
+<section>
+<form autocomplete='off' class='form-group' id='safelink'>
+<div class='input-group mb-0'>
+<div class='input-group-prepend'>
+<span class='input-group-text'><i class='fas fa-link fa-fw'></i></span>
+</div>
+<input class='form-control' id='urlinput' onclick='sUp(&#39;#result&#39;)' onkeypress='sUp(&#39;#result&#39;)' placeholder='HTTP, HTTPS, or WWW' type='text'/>
+<div class='input-group-append'>
+<button class='btn btn-primary' type='submit'>Convert</button>
+</div>
+</div>
+</form>
+</section>
+<section>
+<div class='row mb-2'>
+<div class='col-3'>
+<button class='btn btn-dark btn-block' id='passbtn' onclick='sUp(&#39;#result&#39;)'>Password</button>
+</div>
+<div class='col-9'>
+<div class='input-group mb-0'>
+<div class='input-group-prepend'>
+<span class='input-group-text'><i class='fas fa-lock fa-fw'></i></span>
+</div>
+<input class='form-control' disabled='disabled' id='passinput' onclick='sUp(&#39;#result&#39;)' onkeypress='sUp(&#39;#result&#39;)' type='text'/>
+</div>
+</div>
+</div>
+</section>
+<section class='mb-3'>
+<div class='d-inline-block custom-control custom-switch mr-3'>
+<input class='custom-control-input' id='randPost' onclick='sUp(&#39;#result&#39;)' type='checkbox'/>
+<label class='custom-control-label' for='randPost' onclick='sUp(&#39;#result&#39;)'>Random Post</label>
+</div>
+<div class='d-inline-block custom-control custom-switch'>
+<input class='custom-control-input' id='countDown' onclick='sUp(&#39;#result&#39;)' type='checkbox'/>
+<label class='custom-control-label' for='countDown' onclick='sUp(&#39;#result&#39;)'>Countdown</label>
+</div>
+</section>
+<section class='trans' style='overflow: hidden;height: 0'>
+<div id='result'></div>
+</section>
+<section class='layouthide'>
+<div class='row text-center mb-3' style='margin-top:20%'>
+<div class='col-12 col-sm-4'>
+<div style='height: 60px; overflow: hidden'>
+<i class='fas fa-eye fa-fw fa-3x'></i>
+</div>
+<h5>Encrypt</h5>
+<p>Make your url unreadable and no one can bypass</p>
+</div>
+<div class='col-12 col-sm-4'>
+<div style='height: 60px; overflow: hidden'>
+<i class='fas fa-lock fa-fw fa-3x'></i>
+</div>
+<h5>Password</h5>
+<p>Set a password to protect your links from unauthorized access</p>
+</div>
+<div class='col-12 col-sm-4'>
+<div style='height: 60px; overflow: hidden'>
+<i class='fas fa-cogs fa-fw fa-3x'></i>
+</div>
+<h5>Setting</h5>
+<p>Easy to setting without need to know programming language</p>
+</div>
+</div>
+</section>
+<script type='text/javascript'>
+              "use strict";
+                $(document).ready(function() {
+
+                  config.countdown ? $('#countDown').prop('checked', true) : $('#countDown').prop('checked', false) ;
+
+                  $('#passbtn').on('click', function(e) {
+                    var $this = $(this);
+                      if($this.hasClass('btn-dark')){
+                        $this.removeClass('btn-dark').addClass('btn-primary');
+                        $('#passinput').removeAttr('disabled');
+                      } else {
+                        $this.removeClass('btn-success').addClass('btn-dark');
+                        $('#passinput').attr('disabled', 'disabled')[0].value = '';
+                      }
+                    e.preventDefault();
+                  });
+
+                  $('#safelink').on('submit', function(e) {
+                    e.preventDefault();
+                    var $this = $(this),
+                    passinput = $('#passinput')[0],
+                    keyit = passinput.value.length ? passinput.value : config.defaultkey,
+                    blog = config.url.length ? config.url : window.location.protocol + "//" + window.location.hostname,
+                    url = $this.find('#urlinput')[0],
+                    randPost = $('#randPost')[0],
+                    result = $('#result')[0],
+                    data = {};
+                    data.url = url.value,
+                    data.countdown = $('#countDown')[0].checked;
+
+                    if (url.value.length) {
+                      if (randPost.checked) {
+                        if (validurlit(url.value)) {
+                          $.ajax({
+                            url: '/feeds/posts/summary?alt=json&max-results=99',
+                            type: 'GET',
+                            dataType: 'json',
+                            cache: true,
+                            beforeSend: function() {
+                              result.innerHTML = '<div class="text-center"><span class="spinner-border spinner-border-sm text-primary" role="status" aria-hidden="true"></span> Fetch Post</div>' ;
+                            },
+                            success: function(a){
+                              var post = a.feed.entry,
+                                  randNum = Math.floor(Math.random() * post.length),
+                                  linknya = "";
+                              for(var i = 0; i < post[randNum].link.length; i++){
+                                if(post[randNum].link[i].rel == 'alternate') {
+                                    linknya = post[randNum].link[i].href;
+                                  break;
+                                }
+                              }
+                              result.innerHTML = '<div class="alert alert-success text-center">'+config.lang.convertsuccess+'</div><div class="input-group mb-0"><div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-copy fa-fw"></i></span></div><input class="form-control" onfocus="this.select()" onmouseup="return false" style="box-shadow: 0 0 0 0 transparent" value="'+linknya+'?u='+encodeURIComponent(CryptoJS.AES.encrypt(JSON.stringify(data), keyit))+'"/></div>';
+                              setTimeout(function(){
+                                result.parentNode.style.height = result.offsetHeight+'px';
+                              }, 0);
+                            }
+                          });
+                          // result.innerHTML = '<div class="text-center"><span class="spinner-border spinner-border-sm text-primary" role="status" aria-hidden="true"></span> Fetch Post</div>' ;
+                        } else {
+                          result.innerHTML = '<div class="alert alert-warning text-center">'+config.lang.validtext+'</div>' ;
+                        }
+                      } else {
+                        result.innerHTML = validurlit(url.value) ? '<div class="alert alert-success text-center">'+config.lang.convertsuccess+'</div><div class="input-group mb-0"><div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-copy fa-fw"></i></span></div><input class="form-control" onfocus="this.select()" onmouseup="return false" style="box-shadow: 0 0 0 0 transparent" value="'+blog+'/'+config.page+'?u='+encodeURIComponent(CryptoJS.AES.encrypt(JSON.stringify(data), keyit))+'"/></div>' : '<div class="alert alert-warning text-center">'+config.lang.validtext+'</div>' ;
+                      }
+                    } else {
+                      result.innerHTML = '<div class="alert alert-danger text-center">'+config.lang.urlempty+'</div>';
+                    }
+
+
+                    setTimeout(function(){
+                      result.parentNode.style.height = result.offsetHeight+'px';
+                    }, 0);
+                  });
+
+                });
+              </script>
+<div class='section' id='page-is'>
+</div>
+</div>
+<div class='col-12 col-md-3 order-last mb-3'>
+<div class='ads-right sticky-top section' id='ads-right'><div class='widget HTML' data-version='2' id='HTML704'>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class='footer'>
+<div class='d-table w-100' style='height:100%'>
+<div class='d-table-row'>
+<div class='d-table-cell align-middle'>
+<div class='container'>
+<div class='row'>
+<div class='col-sm-5'>
+              &#169; 2019 <a href='https://nihlink.blogspot.com/' title='NihLink'><span title='NihLink'>NihLink</span></a> All Right Reserved
+            </div>
+<div class='col-sm-7 text-right'>
+              Created By <a href='//anasrar.github.io' id='naas' title='Anas RAR'>Anas RAR</a>
+<!-- Please Dont Remove Or Change My Link -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script type='text/javascript'>
+  $(document).ready(function() {
+    if (config.fixednavbar) {
+      var navbar = $('.navbar'), placeholder = navbar.parent();
+      $(window).on('resize load', function(){
+        navbar.css({position: 'fixed', width: placeholder.outerWidth()+'px', zIndex: '9999999'});
+        placeholder.css({height: navbar.outerHeight()+'px'});
+      });
+    }
+  });
+</script>
 </body>
 </html>
