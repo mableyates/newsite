@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Safelink</title>
+  </head>
+  <body>
+    <div id="maker">
+      <form id="sform" method="post">
+        <input type="text" id="url">
+        <input type="submit">
+      </form>
+      <div id="result"></div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+
+      $("#sform").submit(function(){
+        var siteurl = "http://bl.ocks.org/gfjaru/raw/5aa9e037e6186f3f4a12/220a17c31e88f0a5a598e86cd422060ad5b33ac9/";
+        var url = $("#url").val();
+        
+        $("#result").html('<p>Copy this url</p><input value="' + siteurl + '?goto=' + btoa(url) + '">');
+        
+        return false;
+      });
+    
+      // http://stackoverflow.com/a/21151913
+      var get_params = function(search_string) {
+      
+        var parse = function(params, pairs) {
+          var pair = pairs[0];
+          var parts = pair.split('=');
+          var key = decodeURIComponent(parts[0]);
+          var value = decodeURIComponent(parts.slice(1).join('='));
+
+          if (typeof params[key] === "undefined") {
+            params[key] = value;
+          } else {
+            params[key] = [].concat(params[key], value);
+          }
+
+          return pairs.length == 1 ? params : parse(params, pairs.slice(1))
+        }
+
+        return search_string.length == 0 ? {} : parse({}, search_string.substr(1).split('&'));
+      }
+      
+      var gotoref = get_params(location.search);
+
+      if (gotoref['goto']) {
+        
+        function otewegan(){
+          _gotoref = atob(gotoref['goto']);
+          $(location).attr('href', _gotoref);
+        };
+        
+        $("#maker").html("<h1>Redirecting</h1><p>Wait 5s</p>");
+        window.setTimeout( otewegan, 5000 )
+      }
+
+    });
+    </script>
+  </body>
+</html>
