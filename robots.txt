@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://skymovieshd.in/sitemap.xml
