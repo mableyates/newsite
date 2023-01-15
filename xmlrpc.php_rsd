@@ -2,13 +2,13 @@
 	<service>
 		<engineName>WordPress</engineName>
 		<engineLink>https://wordpress.org/</engineLink>
-		<homePageLink>https://hdhub4u.team</homePageLink>
+		<homePageLink>https://byrongold.ga</homePageLink>
 		<apis>
-			<api name="WordPress" blogID="1" preferred="true" apiLink="https://hdhub4u.team/xmlrpc.php" />
-			<api name="Movable Type" blogID="1" preferred="false" apiLink="https://hdhub4u.team/xmlrpc.php" />
-			<api name="MetaWeblog" blogID="1" preferred="false" apiLink="https://hdhub4u.team/xmlrpc.php" />
-			<api name="Blogger" blogID="1" preferred="false" apiLink="https://hdhub4u.team/xmlrpc.php" />
-				<api name="WP-API" blogID="1" preferred="false" apiLink="https://hdhub4u.team/wp-json/" />
+			<api name="WordPress" blogID="1" preferred="true" apiLink="https://byrongold.ga/xmlrpc.php" />
+			<api name="Movable Type" blogID="1" preferred="false" apiLink="https://byrongold.ga/xmlrpc.php" />
+			<api name="MetaWeblog" blogID="1" preferred="false" apiLink="https://byrongold.ga/xmlrpc.php" />
+			<api name="Blogger" blogID="1" preferred="false" apiLink="https://byrongold.ga/xmlrpc.php" />
+				<api name="WP-API" blogID="1" preferred="false" apiLink="https://byrongold.ga/wp-json/" />
 			</apis>
 	</service>
 </rsd>
