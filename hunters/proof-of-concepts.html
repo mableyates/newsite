@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>How do I create a detailed proof of concept?</title>
+  <link rel="stylesheet" type="text/css" href="../assets/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/stylesheet.css">
+</head>
+<body>
+  <div class="wrapper">
+    <nav>
+      <a class="button" href="../index.html">← Home</a>
+    </nav>
+    <h3>How do I create a detailed proof of concept?</h3>
+    <p>I have a little secret for you that will completely change the way you create your proof of concepts: <b>Stick to the rules like a <a href="https://en.wikipedia.org/wiki/White_hat_(computer_security)">white hat</a> and then, with that in mind, create your proof of concept thinking like a <a href="https://en.wikipedia.org/wiki/Black_hat">black hat</a>.</b> What I mean by this is always stick by the rules while hunting and then when it comes to demonstrating the impact of the issue, create your proof of concept in a way that highlights how your finding could potentially affect the target. This does <b>not</b> always work and definitely does <b>not</b> mean you should start escalating the issue and gaining unauthorised access. This simply signifies that you need to understand what the real potential impact is of your finding and then work according to the program's rules in order to create something really clever which could actually work in a real-world scenario. You can see this mindset in action in <a href="https://hackerone.com/reports/289823">this report</a>.</p>
+
+    <h3>Hall of PoC™</h3>
+    <p>This is a mega list of proof of concepts (PoCs) for you to use when demonstrating the impact of your issue. The PoCs are designed so that the bug bounty program can quickly understand the issue and to ensure you do not harm any of their users or services in the process. That being said, always follow the rules on the program's policy; the program's security policy always takes precedence over the list.</p>
+    <table>
+      <tr>
+        <th>Issue type</th>
+        <th>PoC</th>
+      </tr>
+      <tr>
+        <td>Cross-site scripting</td>
+        <td><a href='javascript:alert(document.domain)'><code>alert(document.domain)</code></a> or <code>setInterval`alert\x28document.domain\x29`</code> if you have to use backticks.<sup> <a href="https://medium.com/@know.0nix/jumping-to-the-hell-with-10-attempts-to-bypass-devils-waf-4275bfe679dd">[1]</a></sup> Using <code>document.domain</code> instead of <code>alert(1)</code> can help avoid reporting XSS bugs in sandbox domains, as described on the Google <a href="https://sites.google.com/site/bughunteruniversity/improve/alert-1-considered-harmful">Bughunter University</a> site.</sup></td>
+      </tr>
+      <tr>
+        <td>Command execution</td>
+        <td>This involves the execution of arbitrary commands on a target server. Check the program security policy as specific commands may be designated for testing. For example, this set of primitives is set by <a href="https://hackerone.com/yahoo">Yahoo</a> to ensure researchers "minimise the mayhem."
+          <ul>
+            <li>Read (Linux-based): <code>cat /proc/1/maps</code>
+            <li>Write (Linux-based): <code>touch /root/your_username</code>
+            <li>Execute (Linux-based): <code>id</code></li>
+          </ul>
+        </td>
+      </tr>
+        <tr>
+        <td>Code execution</td>
+        <td>This involves the manipulation of a web app such that server-side code (e.g. PHP) is executed. 
+          <ul>
+          <li>PHP: <code>&lt;?php echo 7*7; ?&gt;</code>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>SQL injection</td>
+        <td>
+          <p>If column values can be influenced, simply grabbing the SQL server version with the following payloads should be enough to demonstrate basic SQL injection capability.</p>
+          <ul>
+            <li>MySQL and MSSQL: <code>SELECT @@version</code></li>
+            <li>Oracle: <code>SELECT version FROM v$instance;</code></li>
+            <li>Postgres SQL: <code>SELECT version()</code></li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Unvalidated redirect</td>
+        <td>
+          <ul>
+            <li>Set the redirect endpoint to a known safe domain (e.g. <code>google.com</code>), or if looking to demonstrate potential impact, to your own website with an example login screen resembling the target's.</li>
+            <li>Ensure that your proof of concept page is static, described as a proof of concept, and does not really send credentials anywhere.</li>
+            <li>If the target uses <a href="https://en.wikipedia.org/wiki/OAuth">OAuth</a>, you can try to leak the OAuth token to your server to maximise impact. <sup><a href="https://ngailong.wordpress.com/2017/08/07/uber-login-csrf-open-redirect-account-takeover/">[2]</a></sup></li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Information exposure</td>
+        <td>Data exposure manifests in a variety of forms. Researchers should use self-created test accounts (or those provisioned by the program you're working on). Let's say you're looking for an <abbr title="Insecure Direct Object Reference">IDOR</abbr> vulnerability &mdash; which in this example is an endpoint allowing you to iterate over an ID parameter (e.g. <code>?id=1337</code>) to disclose another user's information. 
+          <br/><br/>Investigate only with the IDs of your <i>own</i> test accounts &mdash; do not leverage the issue against other users' data &mdash; and describe your full reproduction process in the report.</td>
+      </tr>
+      <tr>
+        <td>Cross-site request forgery</td>
+        <td>
+          After you've confirmed the presence of a CSRF bug &mdash; ensuring there are no leftover token or once-only values &mdash; either attach a file to demonstrate your proof of concept or paste the code in a code block in your report.
+          <pre><code>&lt;form action=&quot;http://example.com/settings&quot; method=&quot;POST&quot;&gt;
+   &lt;input type=&quot;hidden&quot; name=&quot;username&quot; value=&quot;example&quot;/&gt;
+   &lt;input type=&quot;hidden&quot; name=&quot;password&quot; value=&quot;password1234&quot;/&gt;
+   &lt;input type=&quot;submit&quot; value=&quot;Click me&quot;/&gt;
+&lt;/form&gt;</code></pre>
+          When designing a real-world example, either hide the form (<code>style="display:none;"</code>) and make it submit automatically, or design it so that it resembles a component from the target's page.
+        </td>
+      </tr>
+      <tr>
+        <td>Server-side request forgery</td>
+        <td>The <a href="https://www.hackerone.com/blog-How-To-Server-Side-Request-Forgery-SSRF">"How To"</a> article from HackerOne is an excellent introduction to SSRF. As Jobert explains, webhooks, parsers, and PDF generator features are often vulnerable. The impact of a SSRF bug will vary &mdash; a non-exhaustive list of proof of concepts includes:
+        <ul>
+          <li>reading local files</li>
+          <li>obtaining cloud instance <a href="https://www.nccgroup.trust/uk/about-us/newsroom-and-events/blogs/2017/august/when-a-web-application-ssrf-causes-the-cloud-to-rain-credentials-and-more">metadata</a></li>
+          <li>making requests to internal services (e.g. Redis)</li>
+          <li>accessing firewalled databases</li>
+          </ul>
+          </td>
+   
+      </tr>
+      <tr>
+        <td>Local and remote file inclusion</td>
+        <td>Local inclusion allows you to. Remote inclusion allows you to.</td><!-- todo - update -->
+      </tr>
+       <tr>
+        <td>Local file read</td>
+        <td>This only allows you to read files located on the target system. Make sure to only retrieve a harmless file. Check the program security policy as a specific file may be designated for testing.</td><!-- todo - update -->
+      </tr>
+      <tr>
+        <td>XML external entity processing</td>
+        <td>
+          Output random harmless data. <sup><a href="https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing#Examples">[3]</a></sup>
+          <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+  &lt;!DOCTYPE foo [  
+   &lt;!ELEMENT foo ANY &gt;
+   &lt;!ENTITY xxe SYSTEM &quot;file:///dev/random&quot; &gt;]&gt;&lt;foo&gt;&amp;xxe;&lt;/foo&gt;</code></pre>
+        </td>
+      </tr>
+      <tr>
+        <td>Sub-domain takeover</td>
+        <td>
+          Claim the sub-domain discreetly and serve a harmless file on a hidden page. Do not serve content on the index page. You may use the proof of concept found <a href="../files/sub-domain_takeover.html">here</a>.
+        </td>
+      </tr>
+    </table>
+
+    <nav class="controls">
+      <a class="button" href="is-my-report-valid.html">← Previous</a> <a class="button next" href="books.html">Next →</a>
+    </nav>
+
+    <footer>
+      <small>© Copyright EdOverflow - <a href="https://liberapay.com/EdOverflow">Support this project</a> - ₿ <code>1E2fZRNrrkCKPnWpKZAsJzByBoyoBURADN</code></small>
+    </footer>
+  </div>
+</body>
+</html>
